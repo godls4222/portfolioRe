@@ -1,0 +1,544 @@
+/* style.css */
+/* 
+    font : merriweather , Quicksand 
+    페이지 폭: 1200px , 메인 비주얼=1920px
+    */
+
+/* 초기화 */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+a {text-decoration: none;}
+li {list-style-type: none;}
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    background: #fdfdfd;
+    margin: 0; padding: 0;
+    /* outline: 2px solid red; */
+}
+p {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* main visual */
+#main_visual {
+    position: relative;
+    width: 100%; height: 100vh;
+    background: #abc;
+    background-image: url(../img/bg.0.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: 30;
+}
+#main_visual > .bg0_title {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    top: 50%; transform: translateY(-50%);
+    text-align: center;
+    /* left: 50%; top: 50%;
+    transform: translateX(-50%); transform: translateY(-50%); */
+    /* outline: 2px solid red; */
+}
+#main_visual > .bg0_title > h1 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 48px;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* main header */
+#main_header {
+    position: fixed;
+    width: 1200px; height: 35px;
+    left: 100px;
+    top: 30px;
+}
+
+/* logo */
+#main_header .logo_txt {
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+#main_header .logo_txt > a {
+    color: #fff;
+}
+
+/* header menu */
+#main_header .menu > .depth1 {
+    position: absolute;
+    right: 0;
+}
+#main_header .menu > .depth1 > li {
+    display: inline;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-right: 20px;
+    line-height: 35px;
+}
+#main_header .menu > .depth1 > li > a {
+    color: #fff;
+    cursor: pointer;
+}
+
+/* about me */
+#about_me {
+    position: relative;
+    font-family: 'Merriweather Sans', sans-serif; 
+    width: 1200px; height: 1000px;
+    margin: 0 auto;
+}
+
+/* about me txt */
+#about_me > .about_me_txt {
+    position: absolute;
+    /* outline: 2px solid red; */
+    margin-top: 200px;
+    float: left;
+}
+#about_me > .about_me_txt > h1 {
+    font-size: 36px;
+}
+#about_me > .about_me_txt > p {
+    padding: 10px 0;
+}
+.about_me_img {
+    position: absolute;
+    width: 587px; height: 669px;
+}
+.about_me_img > .about_me_photo {
+    position: absolute;
+    width: 524px; height: 640px;
+    background: #ccc;
+    background-image: url(../img/about_me.jpg);
+    background-size: cover;
+    background-position: center;
+    /* outline: 2px solid red; */
+    top: 150px;
+    left: 600px;
+    z-index: 1;
+}
+.about_me_img .about_me_back_box {
+    position: absolute;
+    width: 125px; height: 553px;
+    left: 1035px;
+    top: 300px;
+    background: #E6AB46;
+    /* outline: 2px solid green; */
+    margin: 0;
+}
+
+/* ability */
+#ability {
+    position: relative;
+    width: 1200px; height: 322px;
+    margin: 0 auto;
+}
+.ability_ctn > h1 {
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+.ability_ctn .photoshop {
+    position: absolute;
+    float: left;
+    width: 500px;
+    height: 65px;
+    top: 97px; left: 30px;
+}
+.ability_ctn .photoshop .gauge_1 {
+    width: 500px; height: 20px;
+    background: #ccc;
+    margin-top: 15px;
+}
+.gauge_1 > .ani_1 {
+    /* position: relative; */
+    width: 400px; height: 20px;
+    /* top: 45%;
+    top: -webkit-calc(50% - 10px);
+    top: calc(50% - 10px);
+    left: 0; */
+    /* left: -webkit-calc(50% - 75px);
+    left: calc(50% - 75px); */
+    /* background: #e6ab46; */
+}
+
+/* animation 1 */
+.gauge_1 > .ani_1 {
+    position: absolute;
+    background: #e6ab46;
+    height: 20px; width: 0;
+    z-index: 0;
+    opacity: 1;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+}
+.gauge_1 > .ani_1.play {
+    -webkit-animation: ani_1 1s ease-in-out;
+    animation: ani_1 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+/* @-webkit-keyframes ani_1 {
+    0%{width: 0;}
+    70%{width: 75%; opacity: 1;}
+    90%{opacity: 1; width: 75%;}
+    100%{opacity: 1; width: 75%;}
+} */
+@keyframes ani_1 {
+    0%{width: 0;}
+    70%{width: 60%; opacity: 1;}
+    90%{opacity: 1; width: 60%;}
+    100%{opacity: 1;width: 60%;}
+}
+.ability_ctn .html_css {
+    position: absolute;
+    float: left;
+    width: 500px;
+    height: 65px;
+    top: 97px; left: 670px;
+}
+.ability_ctn .html_css .gauge_2 {
+    width: 500px; height: 20px;
+    background: #ccc;
+    margin-top: 15px;
+}
+.gauge_2 > .ani_2 {
+    width: 320px; height: 20px;
+}
+
+/* animation 2 */
+.gauge_2 > .ani_2 {
+    position: absolute;
+    background: #e6ab46;
+    height: 20px; width: 0;
+    z-index: 0;
+    opacity: 1;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+}
+.gauge_2 > .ani_2.play {
+    -webkit-animation: ani_2 1s ease-in-out;
+    animation: ani_2 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_2 {
+    0%{width: 0;}
+    70%{width: 50%; opacity: 1;}
+    90%{opacity: 1; width: 50%;}
+    100%{opacity: 1;width: 50%;}
+}
+.ability_ctn .illust {
+    position: absolute;
+    float: left;
+    width: 500px;
+    height: 65px;
+    top: 197px; left: 30px;
+}
+.ability_ctn .illust .gauge_3 {
+    width: 500px; height: 20px;
+    background: #ccc;
+    margin-top: 15px;
+}
+.gauge_3 > .ani_3 {
+    width: 370px; height: 20px;
+}
+/* animation 3 */
+.gauge_3 > .ani_3 {
+    position: absolute;
+    background: #e6ab46;
+    height: 20px; width: 0;
+    z-index: 0;
+    opacity: 1;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+}
+.gauge_3 > .ani_3.play {
+    -webkit-animation: ani_3 1s ease-in-out;
+    animation: ani_3 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_3 {
+    0%{width: 0;}
+    70%{width: 60%; opacity: 1;}
+    90%{opacity: 1; width: 60%;}
+    100%{opacity: 1;width: 60%;}
+}
+.ability_ctn .java {
+    position: absolute;
+    float: left;
+    width: 500px;
+    height: 65px;
+    top: 197px; left: 670px;
+}
+.ability_ctn .java .gauge_4 {
+    width: 500px; height: 20px;
+    background: #ccc;
+    margin-top: 15px;
+}
+.gauge_4 > .ani_4 {
+    width: 220px; height: 20px;
+}
+/* animation 4 */
+.gauge_4 > .ani_4 {
+    position: absolute;
+    background: #e6ab46;
+    height: 20px; width: 0;
+    z-index: 0;
+    opacity: 1;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+}
+.gauge_4 > .ani_4.play {
+    -webkit-animation: ani_4 1s ease-in-out;
+    animation: ani_4 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_4 {
+    0%{width: 0;}
+    70%{width: 40%; opacity: 1;}
+    90%{opacity: 1; width: 40%;}
+    100%{opacity: 1;width: 40%;}
+}
+/* works */
+#works {
+    position: relative;
+    width: 1200px; /* height: 768px; */
+    margin: 0 auto;
+    top: 250px;
+}
+.works_title h1 {
+    /* position: absolute; */
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    /* outline: 2px solid red; */
+}
+.works_title > .l_line {
+    position: absolute;
+    width: 400px; height: 2px;
+    top: 25px; left: 50px;
+    background: #000;
+}
+.works_title > .r_line {
+    position: absolute;
+    width: 400px; height: 2px;
+    top: 25px; left: 750px;
+    background: #000;
+}
+.container {
+    width: 1200px;
+}
+
+/* tap menu */
+ul.tabs > li.current {
+    color: #E6AB46;
+}
+ul.tabs > li {
+    background: none;
+    color: #000;
+    display: inline-block;
+    font-family: 'Merriweather Sans', sans-serif;
+    cursor: pointer;
+}
+
+/* nav */
+.tabs {
+    position: relative;
+    width: 430px;
+    /* left: 50%; transform: translateX(-50%); */
+    margin: 0 auto;
+    top: 30px;
+    /* outline: 2px solid red; */
+}
+
+/* works contents */
+.website {
+    position: relative;
+    width: 1195px; /* height: 300px; */
+    top: 70px;
+    /* outline: 2px solid red; */
+    overflow: hidden;
+}
+.website > li {
+    /* position: relative; */
+    /* outline: 2px solid red; */
+    width: 385px; /* height: 300px; */
+    background:none;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    /* overflow: hidden; */
+    /* outline: 2px solid red; */
+}
+.website > li:nth-child(3) {
+    margin-right: 0;
+}
+.website > li:nth-child(6) {
+    margin-right: 0;
+}
+.website p {
+    color: #000;
+    text-align: center;
+}
+
+.tab_content {
+    display: none;
+}
+.tab_content.current {
+    display: block;
+} 
+
+/* hover1 */
+.hover_ctn {
+    opacity: 0;
+}
+.hover_ctn:hover {
+    opacity: 0.8;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.website .hover_bg1 {
+    position: absolute;
+    width: 385px; height: 300px;
+    left: 0; top: 0px;
+    background: #000000;
+    opacity: 0.8;
+    z-index: 99;
+}
+.website .hover1 {
+    position: absolute;
+    top: 130px; left: 150px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 400;
+    z-index: 999;
+}
+
+/* hover2 */
+.website .hover_bg2 {
+    position: absolute;
+    width: 385px; height: 300px;
+    left: 405px; top: 0px;
+    background: #000000;
+    opacity: 0.8;
+    z-index: 99;
+}
+.website .hover2 {
+    position: absolute;
+    top: 130px; left: 550px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 400;
+    z-index: 999;
+}
+/* hover3 */
+.website .hover_bg3 {
+    position: absolute;
+    width: 385px; height: 300px;
+    left: 810px; top: 0px;
+    background: #000000;
+    opacity: 0.8;
+    z-index: 99;
+}
+.website .hover3 {
+    position: absolute;
+    top: 130px; left: 950px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 400;
+    z-index: 999;
+}
+/* hover4 */
+.website .hover_bg4 {
+    position: absolute;
+    width: 385px; height: 300px;
+    left: 0; top: 324px;
+    background: #000;
+    opacity: 0.8;
+    z-index: 99;
+}
+.website .hover4 {
+    position: absolute;
+    top: 440px; left: 60px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 400;
+    z-index: 999;
+}
+/* hover5 */
+.website .hover_bg5 {
+    position: absolute;
+    width: 385px; height: 300px;
+    left: 405px; top: 324px;
+    background: #000;
+    opacity: 0.8;
+    z-index: 99;
+}
+.website .hover5 {
+    position: absolute;
+    top: 440px; left: 550px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 400;
+    z-index: 999;
+}
+/* hover6 */
+.website .hover_bg6 {
+    position: absolute;
+    width: 385px; height: 300px;
+    left: 810px; top: 324px;
+    background: #000;
+    opacity: 0.8;
+    z-index: 99;
+}
+.website .hover6 {
+    position: absolute;
+    top: 440px; left: 930px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 400;
+    z-index: 999;
+}
+/* contact */
+#contact {
+    position: relative;
+    top: 350px;
+    width: 100%; height: 300px;
+    margin: 0 auto;
+    background: #000;
+    color: #fff;
+}
+#contact > .contact_ctn {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    /* left: 50%; transform: translateX(-50%); */
+}
+.contact_ctn > .l_contact_cts {
+    position: absolute;
+    top: 100px; left: 0;
+}
+.l_contact_cts > h1 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 10px 0;
+}
+.contact_ctn > .r_contact_cts  {
+    position: absolute;
+    top: 120px; right: 0;
+}
+.r_contact_cts > p {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px 0;
+}
